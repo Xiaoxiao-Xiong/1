@@ -1,0 +1,2 @@
+# 1
+public class Solution {     int [] num=new int[256];     StringBuffer sb=new StringBuffer();     //Insert one char from stringstream     public void Insert(char ch)     {         sb.append(ch);         if(num[ch]==0){             num[ch]=1;         }         else{             num[ch]+=1;         }     }   //return the first appearence once char in current stringstream     public char FirstAppearingOnce()     {         char []str=sb.toString().toCharArray();         for(char i:str){             if(num[i]==1)                 return i;         }         return '#';     } }
